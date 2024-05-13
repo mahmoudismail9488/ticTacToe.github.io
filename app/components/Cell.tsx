@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from "react"
+import { Dispatch, MouseEventHandler, SetStateAction } from "react"
 
 type cellProps = {
     id : number,
@@ -11,7 +11,7 @@ type cellProps = {
 }
 
 const Cell = ({go,setGo,id,cells,updateCell,cell,winMessage}:cellProps)=>{
-    const handleClick = (e) => {
+    const handleClick = () => {
         if (winMessage){
             return
         }
